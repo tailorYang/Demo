@@ -1,0 +1,6 @@
+*{margin:0px;padding:0px;}
+#moocbox{overflow:hidden;width:400px;height:150px;margin:15px auto;border-radius:5px;border:1px solid orange;box-shadow:2px 2px 6px #333333;background: #faf4e2;}
+.message1{height:120px;padding:20px 0px;}
+.message1>li{text-align:center;height:25px;line-height: 25px;font-family:'微软雅黑';}
+.message1>li>a{text-decoration:none;color:#000;}
+.message1>li>a:hover{color:red;}

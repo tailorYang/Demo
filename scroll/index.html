@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>信息滚动</title>
+	<link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+		<div id="moocbox">
+			<ul class="message1" id="first">
+				<li><a href="#">1、第一条新闻标题</a></li>
+				<li><a href="#">2、第二条新闻标题</a></li>
+				<li><a href="#">3、第三条新闻标题</a></li>
+				<li><a href="#">4、第四条新闻标题</a></li>
+				<li><a href="#">5、第五条新闻标题</a></li>
+			</ul>
+			<ul class="message1" id="second"></ul>
+		</div>
+		<script>
+			var area=document.getElementById('moocbox'), first=document.getElementById('first'),
+			second=document.getElementById('second');
+			second.innerHTML=first.innerHTML;
+			function move(){
+				if(area.scrollTop>=first.offsetHeight){
+					area.scrollTop=0;
+				}else{
+					area.scrollTop++;
+				}
+				
+			}
+			var time=setInterval(move,80);
+			area.onmouseover=function(){
+				clearInterval(time);
+			}
+			area.onmouseout=function(){
+				time=setInterval(move,80);
+			}
+		</script>
+</body>
+</html>
